@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Body */
+
+body {
+    font-family: "Public Sans", sans-serif;
+}
+
+/* Header */
+
+.elements__nav a{
+    color: #0D141C;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: "Public Sans", sans-serif;
+    transition: border-bottom 0.3s ease;
+}
+
+.notificacao__nav {
+    background-color: #F1F2F4;
+    border-radius: 10px;
+}
+
+.linha__header {
+    border-color: #0D141C;
+}
+
+.home__nav:hover,
+.abrigos__nav:hover,
+.seguranca__nav:hover,
+.contatos__nav:hover {
+    border-bottom: 1px solid #0D141C;
+}
+
+/* Mapa */
+
+.procurar__input { 
+    border-radius: 10px;
+    width: 53em;
+    height: 2.5em;
+    border: none;
+    background-color: #E7EDF4;
+}
+
+::placeholder {
+    color: #668baf;
+    font-family: "Public Sans", sans-serif;
+    font-weight: 300;
+}
+
+input:focus {
+    color: #668baf;
+}
+
+.lupa {
+    color: #668baf;
+}
+
+/* Pag Segurança */
+/* Dicas Titulo */
+
+.titulo__dicas{
+    font-family: "Public Sans", sans-serif;
+    font-weight: 700;
+}
+.dicas {
+    font-family: "Public Sans", sans-serif;
+}
+
+.icons__antes {
+    background-color: #E7EDF4;
+    border-radius: 10px;
+}
+
+.texto__antes {
+    color: #517CA4;
+}
+
+

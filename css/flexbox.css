@@ -1,0 +1,118 @@
+/* Header */
+
+.elements__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 3em;
+    padding-top: 10px;
+    list-style: none;
+    gap: 0;
+    padding-bottom: 5px;
+}
+
+.menu__group {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.img__notification {
+    width: 20px;
+}
+
+.notificacao__nav {
+    padding: 10px 13px 13px;
+    text-align: center;
+}
+
+.man__img {
+    width: 40px;
+}
+
+/* Mapa */
+
+.procurar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.procurar__input {
+    padding: 1.5em;
+}
+
+.lupa {
+    position: absolute;
+    left: 11em;
+    padding-left: 5px;
+}
+
+::placeholder {
+    padding-left: 1em;
+    justify-content: center;
+}
+
+input:focus {
+    outline: none; 
+    border: none;  
+    padding-left: 40px;
+}
+
+.mapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2em;
+}
+
+/* Pag Segurança */
+/* Titulo Dicas */
+
+.titulo__dicas {
+    margin-left: 3em;
+}
+
+.antes__enchente {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.titulos {
+    margin-left: 6em;
+    margin-top: 3em;
+}
+
+.dicas__box {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-left: 7em;
+    gap: 10px;
+}
+
+.icons__antes {
+    margin-top: 10px;
+    padding: 15px;
+    flex-shrink: 0; 
+}
+
+.conteudo__dica {
+    flex: 1;
+}
+
+.conteudo__dica h6 {
+    margin: 0 0 8px 0;
+}
+
+.texto__antes {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.corpo__bombeiros {
+    padding-bottom: 2em;
+}
