@@ -8,7 +8,7 @@
     padding-top: 10px;
     list-style: none;
     gap: 0;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
 }
 
 .menu__group {
@@ -16,6 +16,33 @@
     align-items: center;
     gap: 30px;
 }
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #0D141C;
+    transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
 
 .img__notification {
     width: 20px;
@@ -116,3 +143,118 @@ input:focus {
 .corpo__bombeiros {
     padding-bottom: 2em;
 }
+
+
+/* Responsividade */
+    @media (max-width: 768px) {
+        .hamburger {
+            display: flex;
+        }
+
+        .menu__group {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background-color: white;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            transition: right 0.3s ease;
+            z-index: 1000;
+        }
+
+        .menu__group.active {
+            right: 0;
+        }
+
+        .menu__group a {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .container {
+            padding: 0 15px;
+        }
+
+        .titulo__dicas {
+            font-size: 24px;
+            margin-bottom: 10px;
+            margin-left: 0;
+        }
+
+        .titulos {
+            margin: 30px 0 15px 10px;
+        }
+
+        .titulos h5 {
+            font-size: 20px;
+        }
+
+        .dicas__box {
+            padding: 15px;
+            gap: 12px;
+            margin-left: 0;
+        }
+
+        .icons__antes {
+            padding: 12px;
+        }
+
+        .conteudo__dicas h6 {
+            font-size: 16px;
+        }
+
+        .texto__antes {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .header {
+            padding: 0 15px;
+        }
+
+        .titulo__dicas {
+            font-size: 22px;
+        }
+
+        .titulos h5 {
+            font-size: 18px;
+        }
+
+        .dicas__box {
+            padding: 12px;
+            gap: 10px;
+        }
+
+        .icons__antes {
+            padding: 10px;
+        }
+
+        .conteudo__dicas h6 {
+            font-size: 15px;
+        }
+
+        .texto__antes {
+            font-size: 13px;
+        }
+    }
+
+        /* Overlay para fechar menu mobile */
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+
+        .menu-overlay.active {
+            display: block;
+        }

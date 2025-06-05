@@ -4,45 +4,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Enchentes</title>
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/estilos.css">
+  <link rel="stylesheet" href="./css/flexbox.css">
+  <link rel="stylesheet" href="./css/estilo.css">
+   <link 
+    rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icons_names=notifications"
+    />
 </head>
 <body>
-
-  <div class="navbar">
-    <div class="navbar-left">
-      <span class="logo">📍 Alerta Enchentes</span>
-      <a href="#">Início</a>
-      <a href="#">Abrigos</a>
-      <a href="#">Segurança</a>
-      <a href="#">Sobre</a>
-    </div>
-    <div class="navbar-right">
-      <span class="notification-bell">🔔</span>
-      <div class="avatar"></div>
-    </div>
-  </div>
-
-  <div class="search-container">
-    <input type="text" class="main-search" placeholder="Procurar por abrigos" />
-  </div>
-
-  <div class="map-container">
-    <img src="imgs/header/brasil.png" alt="Map of Brazil" class="map-image" />
-    <div class="map-controls">
-      <button class="zoom-btn">+</button>
-      <button class="zoom-btn">−</button>
-      <button class="locate-btn">📍</button>
-    </div>
-    <button class="list-btn">☰</button>
-  </div>
-
+  <header class="header">
+        <nav class="nav__header">
+            <ul class="elements__nav">
+                <a href="index.html" class="logo__nav"><li>Alerta Enchentes</li></a>
+                 <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu__group" id="menuGroup">
+                    <a href="index.html" class="home__nav"><li>Início</li></a>
+                    <a href="mapa.html" class="abrigos__nav"><li>Abrigos</li></a>
+                    <a href="dicas.html" class="seguranca__nav"><li>Segurança</li></a>
+                    <!-- <a href="#" class="contatos__nav"><li>Contatos</li></a>  -->
+                    <a href="#" class="notificacao__nav"><li><img src="./imgs/header/bell.png" class="img__notification"</li></a>
+                    <a href="#" class="man__nav"><li><img src="./imgs/header/man.png" class="man__img"></li></a> 
+                </div>
+            </ul>
+            <hr class="linha__header">
+        </nav>
+    </header>
   <section class="hero">
-    <img src="imgs/header/ENCHENTE.jpg" alt="Flooded Street" class="hero-img" />
+    <img src="./imgs/header/ENCHENTE.jpg" alt="Flooded Street" class="hero-img" />
     <div class="hero-content">
       <div class="hero-content">
     <h1>Enchentes no Brasil: Informações e Auxílio</h1>
     <p>As fortes chuvas têm causado enchentes em diversas regiões do Brasil, afetando milhares de pessoas. Nosso aplicativo oferece informações atualizadas e auxílio para encontrar abrigos próximos e dicas de segurança.</p>
-    <button class="hero-btn">Encontrar Abrigo</button>
+    <a href="mapa.html"><button class="hero-btn">Encontrar Abrigo</button></a>
   </div>
     </div>
   </section>
@@ -81,7 +78,7 @@
         <p class="quote">"As dicas de segurança foram muito úteis e me ajudaram a tomar as decisões certas."</p>
       </div>
       <div class="testimonial">
-        <img src="imgs/header/woman2.png" alt="Mariana Costa">
+        <img src="./imgs/header/woman2.png" alt="Mariana Costa">
         <p class="name">Mariana Costa</p>
         <p class="quote">"Receber alertas em tempo real foi essencial para me manter informada e segura."</p>
       </div>

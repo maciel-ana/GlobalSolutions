@@ -24,11 +24,18 @@
         <nav class="nav__header">
             <ul class="elements__nav">
                 <a href="index.html" class="logo__nav"><li>Alerta Enchentes</li></a>
-                <div class="menu__group">
+
+                 <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="menu__group" id="menuGroup">
                     <a href="index.html" class="home__nav"><li>Início</li></a>
                     <a href="mapa.html" class="abrigos__nav"><li>Abrigos</li></a>
                     <a href="dicas.html" class="seguranca__nav"><li>Segurança</li></a>
-                    <a href="#" class="contatos__nav"><li>Contatos</li></a> 
+                    <!-- <a href="#" class="contatos__nav"><li>Contatos</li></a>  -->
                     <a href="#" class="notificacao__nav"><li><img src="./imgs/header/bell.png" class="img__notification"></li></a>
                     <a href="#" class="man__nav"><li><img src="./imgs/header/man.png" class="man__img"></li></a> 
                 </div>
@@ -36,6 +43,10 @@
             <hr class="linha__header">
         </nav>
     </header>
+
+     <!-- Overlay para fechar menu -->
+    <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+
     <!-- Conteudo Dicas -->
     <div class="container">
         <div class="dicas">
@@ -196,5 +207,39 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function toggleMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const menuGroup = document.getElementById('menuGroup');
+            const menuOverlay = document.getElementById('menuOverlay');
+            
+            hamburger.classList.toggle('active');
+            menuGroup.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const menuGroup = document.getElementById('menuGroup');
+            const menuOverlay = document.getElementById('menuOverlay');
+            
+            hamburger.classList.remove('active');
+            menuGroup.classList.remove('active');
+            menuOverlay.classList.remove('active');
+        }
+
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('.menu__group a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Fechar menu ao redimensionar tela
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+    </script>
 </body>
 </html>
