@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Enchentes</title>
-  <link rel="stylesheet" href="./css/estilos.css">
-  <link rel="stylesheet" href="./css/flexbox.css">
-  <link rel="stylesheet" href="./css/estilo.css">
-   <link 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Enchentes</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/flexbox.css">
+    <link 
     rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icons_names=notifications"
     />
+    <script src="./js/script.js"></script>
 </head>
 <body>
   <header class="header">
@@ -22,17 +22,22 @@
                     <span></span>
                 </div>
                 <div class="menu__group" id="menuGroup">
+                    <div class="close-btn" onclick="closeMenu()">×</div>
                     <a href="index.html" class="home__nav"><li>Início</li></a>
                     <a href="mapa.html" class="abrigos__nav"><li>Abrigos</li></a>
                     <a href="dicas.html" class="seguranca__nav"><li>Segurança</li></a>
                     <!-- <a href="#" class="contatos__nav"><li>Contatos</li></a>  -->
-                    <a href="#" class="notificacao__nav"><li><img src="./imgs/header/bell.png" class="img__notification"</li></a>
+                    <a href="#" class="notificacao__nav"><li><img src="./imgs/header/bell.png" class="img__notification"></li></a>
                     <a href="#" class="man__nav"><li><img src="./imgs/header/man.png" class="man__img"></li></a> 
                 </div>
             </ul>
             <hr class="linha__header">
         </nav>
     </header>
+
+    <!-- Overlay para fechar menu -->
+    <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+
   <section class="hero">
     <img src="./imgs/header/ENCHENTE.jpg" alt="Flooded Street" class="hero-img" />
     <div class="hero-content">

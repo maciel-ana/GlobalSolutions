@@ -1,14 +1,17 @@
-/* Header */
-
+/* Header Layout */
 .elements__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-right: 3em;
     padding-top: 10px;
+    padding-bottom: 15px;
     list-style: none;
     gap: 0;
-    /* padding-bottom: 5px; */
+}
+
+.logo__nav {
+  margin-left: 5em;
 }
 
 .menu__group {
@@ -43,48 +46,61 @@
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
-
 .img__notification {
     width: 20px;
-}
-
-.notificacao__nav {
-    padding: 10px 13px 13px;
-    text-align: center;
 }
 
 .man__img {
     width: 40px;
 }
 
-/* Mapa */
+/* Menu close button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    color: #0D141C;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
 
+.close-btn {
+    display: none;
+}
+
+.close-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Menu Overlay */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+.menu-overlay.active {
+    display: block;
+}
+
+/* Layouts principais */
 .procurar {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 10px;
-}
-
-.procurar__input {
-    padding: 1.5em;
-}
-
-.lupa {
-    position: absolute;
-    left: 11em;
-    padding-left: 5px;
-}
-
-::placeholder {
-    padding-left: 1em;
-    justify-content: center;
-}
-
-input:focus {
-    outline: none; 
-    border: none;  
-    padding-left: 40px;
 }
 
 .mapa {
@@ -94,13 +110,24 @@ input:focus {
     padding-top: 2em;
 }
 
-/* Pag Segurança */
-/* Titulo Dicas */
-
-.titulo__dicas {
-    margin-left: 3em;
+/* Feature Grid */
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
+/* Testimonial Grid */
+.testimonial-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Página de Segurança - Layout */
 .antes__enchente {
     display: flex;
     flex-direction: column;
@@ -121,140 +148,113 @@ input:focus {
     gap: 10px;
 }
 
-.icons__antes {
-    margin-top: 10px;
-    padding: 15px;
-    flex-shrink: 0; 
-}
-
-.conteudo__dica {
+.conteudo__dicas {
     flex: 1;
 }
 
-.conteudo__dica h6 {
-    margin: 0 0 8px 0;
-}
-
-.texto__antes {
-    margin: 0;
-    line-height: 1.5;
-}
-
-.corpo__bombeiros {
-    padding-bottom: 2em;
-}
-
-
 /* Responsividade */
-    @media (max-width: 768px) {
-        .hamburger {
-            display: flex;
-        }
-
-        .menu__group {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 100%;
-            height: 100vh;
-            background-color: white;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            transition: right 0.3s ease;
-            z-index: 1000;
-        }
-
-        .menu__group.active {
-            right: 0;
-        }
-
-        .menu__group a {
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        .container {
-            padding: 0 15px;
-        }
-
-        .titulo__dicas {
-            font-size: 24px;
-            margin-bottom: 10px;
-            margin-left: 0;
-        }
-
-        .titulos {
-            margin: 30px 0 15px 10px;
-        }
-
-        .titulos h5 {
-            font-size: 20px;
-        }
-
-        .dicas__box {
-            padding: 15px;
-            gap: 12px;
-            margin-left: 0;
-        }
-
-        .icons__antes {
-            padding: 12px;
-        }
-
-        .conteudo__dicas h6 {
-            font-size: 16px;
-        }
-
-        .texto__antes {
-            font-size: 14px;
-        }
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
     }
 
-    @media (max-width: 480px) {
-        .header {
-            padding: 0 15px;
-        }
-
-        .titulo__dicas {
-            font-size: 22px;
-        }
-
-        .titulos h5 {
-            font-size: 18px;
-        }
-
-        .dicas__box {
-            padding: 12px;
-            gap: 10px;
-        }
-
-        .icons__antes {
-            padding: 10px;
-        }
-
-        .conteudo__dicas h6 {
-            font-size: 15px;
-        }
-
-        .texto__antes {
-            font-size: 13px;
-        }
+    .close-btn {
+        display: block;
     }
 
-        /* Overlay para fechar menu mobile */
-        .menu-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            z-index: 999;
-        }
+    .menu__group {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
 
-        .menu-overlay.active {
-            display: block;
-        }
+    .menu__group.active {
+        right: 0;
+    }
+
+    .menu__group a {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .titulo__dicas {
+        font-size: 24px;
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+
+    .titulos {
+        margin: 30px 0 15px 10px;
+    }
+
+    .titulos h5 {
+        font-size: 20px;
+    }
+
+    .dicas__box {
+        padding: 15px;
+        gap: 12px;
+        margin-left: 0;
+    }
+
+    .icons__antes {
+        padding: 12px;
+    }
+
+    .conteudo__dicas h6 {
+        font-size: 16px;
+    }
+
+    .texto__antes {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0 15px;
+    }
+
+    .logo__nav {
+        margin-left: 0;
+    }
+
+    .titulo__dicas {
+        font-size: 22px;
+    }
+
+    .titulos h5 {
+        font-size: 18px;
+    }
+
+    .dicas__box {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .icons__antes {
+        padding: 10px;
+    }
+
+    .conteudo__dicas h6 {
+        font-size: 15px;
+    }
+
+    .texto__antes {
+        font-size: 13px;
+    }
+}
+
